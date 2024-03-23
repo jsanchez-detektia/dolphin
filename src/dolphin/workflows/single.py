@@ -296,10 +296,10 @@ def _get_nodata_mask(
         # invert the mask so -1s are the missing data pixels
         nodata_mask = ~nodata_mask
         # check middle pixel
-        if nodata_mask[nrows // 2, ncols // 2]:
-            logger.warning(f"{mask_file} is True at {nrows//2, ncols//2}")
-            logger.warning("Proceeding without the nodata mask.")
-            nodata_mask = np.zeros((nrows, ncols), dtype=bool)
+        # if nodata_mask[nrows // 2, ncols // 2]:
+        #     logger.warning(f"{mask_file} is True at {nrows//2, ncols//2}")
+        #     logger.warning("Proceeding without the nodata mask.")
+        #     nodata_mask = np.zeros((nrows, ncols), dtype=bool)
     else:
         nodata_mask = np.zeros((nrows, ncols), dtype=bool)
     return nodata_mask

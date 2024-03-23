@@ -565,7 +565,7 @@ def prepare_geometry(
 
     if geo_files[0].name.endswith(".h5"):
         # ISCE3 geocoded SLCs
-        datasets = ["los_east", "los_north"]
+        datasets = ["los_east", "los_north", "layover_shadow_mask", "local_incidence_angle"]
 
         for ds_name in datasets:
             outfile = geometry_dir / f"{ds_name}.tif"
